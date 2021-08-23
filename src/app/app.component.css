@@ -1,0 +1,17 @@
+label, input, table th, table td {font-size:12pt;}
+h1, form{text-align: center;}
+form input {border-radius: 5px; border: 1px solid black; margin:10px;}
+.error{color:red; display:block; padding-top:15px; text-align: center;}
+table{margin:0 auto;  border-collapse:separate;
+    border-radius: 7px; 
+    overflow: hidden; border:1px solid black;}
+table th, table td {padding:5px; }
+table th {text-align: center; padding:7px; font-weight:normal;}
+.headerRow{background-color:rgb(144, 192, 230);}
+tr.mainRow:nth-child(even) {background:#ebf0f3; 
+        border-top:1px solid #cccccc}
+tr.mainRow:nth-child(odd) {background: #FFF; border-top:1px solid #cccccc}
+table td {border-right:1px solid #cccccc; text-align: center;}
+table td.distance{text-align: right; border-right:0}
+table td a {text-decoration: underline;}
+table td.narrative{width:500px; text-align: left;}

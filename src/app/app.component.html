@@ -1,0 +1,33 @@
+<h1>MapQuest</h1>
+
+<form>
+  <label>Start:</label>
+  <input id="origin" type="text" #origin 
+    (keyup)="setOrigin(origin.value)"/>
+
+  <label>End:</label>
+  <input id="destination" type="text" #destination 
+    (keyup)="setDestination(destination.value)"/>
+
+  <button class="btn btn-primary" (click)="search()">
+    Get Directions
+  </button>
+</form>
+
+<span class="error">{{errorMsg}}</span>
+
+<table id="tbl" *ngIf="dataItems">
+  <tr class="headerRow">
+    <th [(ngModel)]="dataItems" colspan="4" name="fieldName" ngDefaultControl>
+      <b>Distance:</b> {{dataItems.route.distance}}m &nbsp; - &nbsp;
+      <b>Time:</b> {{dataItems.route.formattedTime}}
+    </th>
+  </tr>
+
+  <tr class="mainRow" *ngFor="let step of route">
+    <td><img alt="arrow" src="{{step.iconUrl}}"></td>
+    <td>{{(step.index)+1}}.</td>
+    <td class="narrative"><a target="_blank" href="{{step.mapUrl}}">{{step.narrative}}</a></td>
+    <td class="distance">{{step.distance | number : '1.2-2'}}m</td>
+  </tr>
+</table>
