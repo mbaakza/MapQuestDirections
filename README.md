@@ -1,4 +1,5 @@
-# Change the location or destination to see driving directions auto-update
+## MapQuest Driving Directions
+## Change the location or destination to see the directions auto-update
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
